@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from a import get_scale
+from scala import get_scale
 app = Flask(__name__)
 
 
