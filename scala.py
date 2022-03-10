@@ -21,6 +21,19 @@ def pascal_tr(n):
         print('\n')
 
 
+def pascal_another_method(a):
+    lst = [1]
+    for i in range(a):
+        print(lst)
+        mylist = []
+        mylist.append(lst[0])
+        for i in range(len(lst) - 1):
+            mylist.append(lst[i] + lst[i + 1])
+        mylist.append(lst[-1])
+        lst = mylist
+    return lst
+
+
 '''
 ocena celująca – 100%;
 ocena bardzo dobra – od 88% do 99%;
