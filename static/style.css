@@ -1,0 +1,120 @@
+
+h1::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+h2 {
+    position: relative;
+    font-size: 1.5rem;
+    /*color: #F76C6C;*/
+    /*color: #5CDB95;*/
+    color: #FFD166;
+}
+
+h1 {
+    position: relative;
+    font-size: 3rem;
+    /*color: #F76C6C;*/
+    color: #5CDB95;
+    /*color: #FFD166;*/
+}
+
+h3 {
+    position: relative;
+    font-size: 2rem;
+    /*color: #F76C6C;*/
+    color: #FFD166;
+    /*color: #FFD166;*/
+}
+
+@media screen and (max-width: 980px) {
+    h1 {
+        position: relative;
+        font-size: 6rem;
+        /*color: #F76C6C*/
+        /*color: #5CDB95;*/
+        color: #5CDB95;
+        margin-left: 20px;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin-left: 20px;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        margin-left: 20px;
+
+    }
+
+    input {
+        margin-left: 20px;
+    }
+
+    .button1 {
+        min-width: 196px;
+    min-height: 138px;
+    }
+}
+
+html {
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+body {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: system-ui, sans-serif;
+    /*background: #A8D0E6;*/
+    /*background: #05386B;*/
+    background: #2D3047;
+}
+
+input {
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    border: 0;
+    font-family: inherit;
+    padding: 8px 7px 0 7px;
+    border-radius: 5px;
+    height: 56px;
+    font-size: 26px;
+    font-weight: 400;
+    transition: all .15s ease;
+    margin-top: 5px;
+}
+
+.button1 {
+
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 2px 16px;
+    height: 38px;
+    min-width: 96px;
+    min-height: 38px;
+    border: none;
+    color: #2D3047;
+    background-color: #5CDB95;
+    transition: background-color .17s ease, color .17s ease;
+}
+
+

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Punktacja</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename ='style.css') }}">
+</head>
+<body>
+<form action="{{ url_for("punctation") }}" method="post">
+    <label for="pkt"><h1>Liczba punktów do zdobycia:</h1></label>
+    <input type="text" id="1" name="pkt2" placeholder="10">
+    <button type="submit" class="button1">Potwierdź</button>
+</body>
+</html>
