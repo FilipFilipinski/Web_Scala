@@ -2,6 +2,9 @@ from flask import Flask, request, render_template
 from scala import get_scale
 app = Flask(__name__)
 
+@app.route('/info')
+def info():
+    return render_template("info.html")
 
 @app.route('/', methods=["GET", "POST"])
 def punctation():
