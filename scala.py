@@ -1,13 +1,27 @@
 from math import factorial
 
 
+def round_to_half(i):
+    i = str(round(i, 1))
+    first_character = int(float(i))
+    last_character = i[-1]
+    if int(last_character) >= 5:
+        last_character = 5
+    else:
+        last_character = 0
+    return f'{first_character}.{last_character}'
+
+
 def get_scale(pkt):
     final = []
+    not_final = []
     arr = [['cel', pkt, pkt], ['bdb', pkt * 88 / 100, pkt * 99 / 100], ['db', pkt * 72 / 100, pkt * 87 / 100],
            ['dst', pkt * 56 / 100, pkt * 71 / 100], ['dop', pkt * 41 / 100, pkt * 55 / 100],
            ['ndst', pkt * 0 / 100, pkt * 40 / 100]]
     for i in arr:
-        final.append([i[0], round(i[1], 1), round(i[2], 1)])
+        not_final.append([i[0], round_to_half(i[1]), round_to_half(i[2])])
+        final.append(not_final)
+        not_final = []
     return final
 
 
