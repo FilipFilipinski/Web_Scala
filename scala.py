@@ -5,6 +5,7 @@ def round_to_half(i):
     i = str(round(i, 1))
     first_character = int(float(i))
     last_character = i[-1]
+    print(int(last_character), i)
     if int(last_character) >= 5:
         last_character = 5
     else:
@@ -19,7 +20,7 @@ def get_scale(pkt):
            ['dst', pkt * 56 / 100, pkt * 71 / 100], ['dop', pkt * 41 / 100, pkt * 55 / 100],
            ['ndst', pkt * 0 / 100, pkt * 40 / 100]]
     for i in arr:
-        not_final.append([i[0], round_to_half(i[1]), round_to_half(i[2])])
+        not_final.append([i[0], round_to_half(float(i[1])), round_to_half(float(i[2]))])
         final.append(not_final)
         not_final = []
     return final
