@@ -1,4 +1,4 @@
-# Application to create scale on tests
+# Application to create scale on tests 📚✖️➕➗🔢
 
 The application is written in Python using the Flask library and pure HTML😊.
 
