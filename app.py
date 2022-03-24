@@ -16,7 +16,7 @@ def punctation():
         if point == "":
             point = 10
         try:
-            int(point)
+            abs(int(point))
         except:
             return render_template("form.html")
         x = get_scale(int(point))
