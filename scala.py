@@ -14,16 +14,17 @@ def round_to_half(i):
 
 
 def get_scale(pkt):
-    final = []
-    not_final = []
+    final_list = []
     arr = [['cel', pkt, pkt], ['bdb', pkt * 88 / 100, pkt * 99 / 100], ['db', pkt * 72 / 100, pkt * 87 / 100],
            ['dst', pkt * 56 / 100, pkt * 71 / 100], ['dop', pkt * 41 / 100, pkt * 55 / 100],
            ['ndst', pkt * 0 / 100, pkt * 40 / 100]]
     for i in arr:
-        not_final.append([i[0], round_to_half(float(i[1])), round_to_half(float(i[2]))])
-        final.append(not_final)
-        not_final = []
-    return final
+        final_list.append([i[0], round_to_half(float(i[1])), round_to_half(float(i[2]))])
+    for i in range(5):
+        if final_list[i][1] == final_list[i + 1][2]:
+            final_list[i+1][2] = str(float(final_list[i + 1][2]) - 0.5)
+    print(final_list)
+    return final_list
 
 
 def pascal_tr(n):
