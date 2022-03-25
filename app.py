@@ -17,7 +17,8 @@ def punctation():
             point = 10
         try:
             int(point)
-        except:
+        except ValueError:
+            print('ValueError')
             return render_template("form.html")
         x = get_scale(abs(int(point)))
         return render_template("final.html", arr=x)
@@ -26,6 +27,7 @@ def punctation():
 
 if __name__ == '__main__':
     app.run()
+
 '''
 
 ocena celująca – 100%;
